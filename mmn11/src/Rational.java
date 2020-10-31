@@ -32,8 +32,8 @@ public class Rational
     @Override
     public String toString()
     {
-        if (this.getDenominator() == 0)
-            return String.valueOf(this.getDenominator());
+        if (this.getNumerator() == 0)
+            return String.valueOf(this.getNumerator());
         else
             return this.getNumerator()+"/"+this.getDenominator();
     }
@@ -41,7 +41,7 @@ public class Rational
     private void setBadValue()
     {
         this.numerator = 0;
-        this.denominator = 0;
+        this.denominator = 1;
     }
 
     public boolean greaterThan(Rational rational)
@@ -71,7 +71,7 @@ public class Rational
 
     public Rational reduce ()
     {
-        if (this.getDenominator() == 0)
+        if (this.getNumerator() == 0)
             return new Rational(this.getNumerator(), this.getDenominator());
         int divisor = this.gcd(this.getNumerator(), this.getDenominator());
         if (divisor < 0)
