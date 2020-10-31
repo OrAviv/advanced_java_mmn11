@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class bullseye
+public class Bullseye
 {
     private Random rand = new Random();
     Scanner my_scanner = new Scanner(System.in);
