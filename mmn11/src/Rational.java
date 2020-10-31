@@ -71,7 +71,11 @@ public class Rational
 
     public Rational reduce ()
     {
+        if (this.getDenominator() == 0)
+            return new Rational(this.getNumerator(), this.getDenominator());
         int divisor = this.gcd(this.getNumerator(), this.getDenominator());
+        if (divisor < 0)
+            divisor *= -1;
         return new Rational(this.getNumerator()/divisor, this.getDenominator()/divisor);
 
     }
