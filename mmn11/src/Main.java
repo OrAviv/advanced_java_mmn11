@@ -37,9 +37,5 @@ public class Main {
         System.out.println(r1.reduce().toString()+" + "+r2.reduce().toString()+" = "+r1.plus(r2).reduce().toString());
         System.out.println(r1.reduce().toString()+" - "+r2.reduce().toString()+" = "+r1.minus(r2).reduce().toString());
         System.out.println(r1.reduce().toString()+" * "+r2.reduce().toString()+" = "+r1.multiply(r2).reduce().toString());
-
-
-
-
     }
 }
