@@ -6,8 +6,8 @@ public class Bullseye
     private Random rand = new Random();
     Scanner my_scanner = new Scanner(System.in);
 
-    private int min_target_value = 1000;
-    private int number_length = 4;
+    final private int min_target_value = 1000;
+    final private int number_length = 4;
     private String guess_history = "";
     private int number_of_guesses = 0;
 
