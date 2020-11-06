@@ -5,13 +5,13 @@ public class Bullseye
 {
     private Random rand = new Random();
     Scanner my_scanner = new Scanner(System.in);
-
+    // Constants & class params.
     final private int min_target_value = 1000;
     final private int number_length = 4;
     private String guess_history = "";
     private int number_of_guesses = 0;
 
-
+    // Main flow.
     public void run_main_flow()
     {
         String target = this.randomize_target();
@@ -39,6 +39,7 @@ public class Bullseye
         }
     }
 
+    // Randomize a target number.
     private String randomize_target()
     {
         int target = this.rand.nextInt(8999) + this.min_target_value;
@@ -52,7 +53,7 @@ public class Bullseye
             target_string = String.valueOf(target);
         }
     }
-
+    // Checks that the number provided is according to requirements.
     private String check_my_number(String number)
     {
         for (int i = 0; i < number.length()-1; i++)
@@ -61,7 +62,7 @@ public class Bullseye
                     return null;
         return number;
     }
-
+    // function to take a guess from the user.
     private String take_a_guess()
     {
         System.out.println("Insert Your guess:");
@@ -75,7 +76,7 @@ public class Bullseye
         }
         return guess_number;
     }
-
+    // Compares target number to user guess.
     private boolean compare_guess_to_target(String guess, String target)
     {
         int guess_counter = 0;

@@ -2,12 +2,12 @@ public class Rational
 {
     private int numerator;
     private int denominator;
-
+    // Constructor.
     public Rational (double numerator, double denominator)
     {
         this.setRatio(numerator, denominator);
     }
-
+    // Checks that numbers provided for ratio are valid and if so returns a Rational object.
     private void setRatio(double numerator, double denominator)
     {
         if ((numerator % (int)numerator == 0) && (denominator > 0 && denominator % (int)denominator == 0))
@@ -38,6 +38,8 @@ public class Rational
             return this.getNumerator()+"/"+this.getDenominator();
     }
 
+    // Function to set Ratio to zero value because of bad values;
+    // denominator is set to '1' on purpose, so mathematical operations wont result wrong values.
     private void setBadValue()
     {
         this.numerator = 0;
