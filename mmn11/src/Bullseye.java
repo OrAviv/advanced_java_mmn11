@@ -4,14 +4,14 @@ import java.util.Scanner;
 public class Bullseye
 {
     private Random rand = new Random();
-    Scanner my_scanner = new Scanner(System.in);
+    public Scanner my_scanner = new Scanner(System.in);
     // Constants & class params.
     final private int min_target_value = 1000;
     final private int number_length = 4;
-    private String guess_history = "";
-    private int number_of_guesses = 0;
+    public String guess_history = "";
+    public int number_of_guesses = 0;
 
-    // Main flow.
+    // Main flow. optional function to run a game;
     public void run_main_flow()
     {
         String target = this.randomize_target();
@@ -40,7 +40,7 @@ public class Bullseye
     }
 
     // Randomize a target number.
-    private String randomize_target()
+    public String randomize_target()
     {
         int target = this.rand.nextInt(8999) + this.min_target_value;
         String target_string = String.valueOf(target);
@@ -63,7 +63,7 @@ public class Bullseye
         return number;
     }
     // function to take a guess from the user.
-    private String take_a_guess()
+    public String take_a_guess()
     {
         System.out.println("Insert Your guess:");
         String guess_number = my_scanner.nextLine();
@@ -77,7 +77,7 @@ public class Bullseye
         return guess_number;
     }
     // Compares target number to user guess.
-    private boolean compare_guess_to_target(String guess, String target)
+    public boolean compare_guess_to_target(String guess, String target)
     {
         int guess_counter = 0;
         int target_counter = 0;
@@ -104,4 +104,6 @@ public class Bullseye
             return false;
         }
     }
+
+
 }
